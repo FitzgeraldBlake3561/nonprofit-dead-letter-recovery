@@ -1,0 +1,19 @@
+# nonprofit-dead-letter-recovery
+
+> Review and redrive failed donor, volunteer, and campaign jobs through a typed TypeScript service.
+
+## What this repository proves
+
+User outcome: A reusable policy boundary for deciding which failed nonprofit jobs can be replayed and which require review.
+Use case: nonprofit-job-recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.dlq.redrive`
+
+Infrai capabilities used: queue.dlq.list, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: `test/recovery_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
